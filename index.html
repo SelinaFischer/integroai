@@ -20,6 +20,7 @@
             --neutral: #4a4a4a;
             --white: #ffffff;
             --accent: #b8987f;
+            --tagline-color: #E5C9A8;
             --dark: #1a1a1a;
             --light-bg: #f5f7fa;
         }
@@ -78,7 +79,7 @@
         .logo-tagline {
             font-size: 0.65rem;
             font-weight: 400;
-            color: var(--accent);
+            color: var(--tagline-color);
             letter-spacing: 1.5px;
             line-height: 1;
         }
@@ -307,7 +308,7 @@
         .section-tag {
             display: inline-block;
             color: var(--accent);
-            font-size: 0.9rem;
+            font-size: 1.1rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -571,6 +572,21 @@
             color: var(--primary);
         }
 
+        .cta-email {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-email a {
+            color: var(--white);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .cta-email a:hover {
+            color: var(--secondary);
+        }
+
         /* Footer */
         footer {
             background: var(--dark);
@@ -712,7 +728,7 @@
             <div class="hero-content">
                 <h1>AI Solutions Simplified</h1>
                 <p class="hero-subtitle">
-                    We help SMEs build strong foundations, find clarity and drive measurable results through strategic AI integration.
+                    We help executives, startups and SMEs build strong foundations, use AI to add value, increase productivity and drive measurable results through strategic AI integration.
                 </p>
                 <p class="hero-tagline">
                     Discover • Strategise • Integrate • Grow
@@ -744,7 +760,7 @@
                             </svg>
                         </div>
                         <h3>Expert Network</h3>
-                        <p>Global certified AI specialists</p>
+                        <p>Global certified AI Consultants, Strategiests and specialists</p>
                     </div>
                     <div class="hero-card">
                         <div class="hero-card-icon">
@@ -776,7 +792,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">The Challenge</span>
-                <h2 class="section-title">Many SMEs pursue AI without establishing the essential foundations</h2>
+                <h2 class="section-title">Many businesses pursue AI without establishing the essential foundations</h2>
             </div>
             <div class="problem-content">
                 <p class="problem-text">
@@ -929,9 +945,9 @@
             <p>Book your free 30-minute AI Readiness Consultation. We'll assess your current state, identify immediate opportunities and outline a practical path forward.</p>
             <div class="hero-buttons">
                 <a href="https://calendly.com/integroai-consulting/30min" class="cta-btn" target="_blank">
-                    <span>Schedule Your Free Consultation</span>
+                    <span>Book Your Free Discovery Call Today</span>
                 </a>
-                <a href="mailto:info.integroAI@consultant.com" class="cta-btn cta-btn-secondary">
+                <a href="/cdn-cgi/l/email-protection#f59c9b939adb9c9b819092879ab4bcb5969a9b86809981949b81db969a98" class="cta-btn cta-btn-secondary">
                     <span>Contact Us</span>
                 </a>
             </div>
@@ -943,7 +959,7 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h3>IntegroAI Consulting</h3>
-                <p>AI Solutions Simplified. Helping SMEs build strong foundations, find clarity and drive results through strategic AI integration with a human-in-the-loop approach.</p>
+                <p>AI Solutions Simplified. Helping businesses build strong foundations, find clarity and drive results through strategic AI integration with a human-in-the-loop approach.</p>
             </div>
             <div class="footer-section">
                 <h4>Services</h4>
@@ -956,12 +972,12 @@
                 <h4>Company</h4>
                 <a href="#about">About Us</a>
                 <a href="#why">Why Us</a>
-                <a href="#contact">Contact</a>
+                <a href="#contact">Contact Us</a>
             </div>
             <div class="footer-section">
                 <h4>Get in Touch</h4>
                 <a href="https://calendly.com/integroai-consulting/30min" target="_blank">Book Consultation</a>
-                <a href="mailto:info.integroAI@consultant.com">Contact Us</a>
+                <a href="/cdn-cgi/l/email-protection#7b12151d145512150f1e1c09143a323b181415080e170f1a150f55181416">Contact Us</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -969,7 +985,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
