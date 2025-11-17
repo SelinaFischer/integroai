@@ -61,11 +61,26 @@
             width: auto;
         }
 
+        .logo-text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
         .logo-text {
             font-size: 1rem;
             font-weight: 700;
             color: var(--white);
             letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            font-weight: 400;
+            color: var(--accent);
+            letter-spacing: 1.5px;
+            line-height: 1;
         }
 
         .nav-menu {
@@ -556,21 +571,6 @@
             color: var(--primary);
         }
 
-        .cta-email {
-            margin-top: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .cta-email a {
-            color: var(--white);
-            text-decoration: underline;
-            font-weight: 600;
-        }
-
-        .cta-email a:hover {
-            color: var(--secondary);
-        }
-
         /* Footer */
         footer {
             background: var(--dark);
@@ -693,7 +693,10 @@
     <nav>
         <div class="logo">
             <img src="logo.png" alt="IntegroAI Consulting Logo">
-            <span class="logo-text">IntegroAI Consulting</span>
+            <div class="logo-text-container">
+                <span class="logo-text">IntegroAI Consulting</span>
+                <span class="logo-tagline">Simplify • Amplify • Grow</span>
+            </div>
         </div>
         <div class="nav-menu">
             <a href="#about">About</a>
@@ -709,7 +712,7 @@
             <div class="hero-content">
                 <h1>AI Solutions Simplified</h1>
                 <p class="hero-subtitle">
-                    We help executives, startups and SMEs build strong foundations, use AI to add value, increase productivity and drive measurable results through strategic AI integration.
+                    We help SMEs build strong foundations, find clarity and drive measurable results through strategic AI integration.
                 </p>
                 <p class="hero-tagline">
                     Discover • Strategise • Integrate • Grow
@@ -773,7 +776,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">The Challenge</span>
-                <h2 class="section-title">Many businesses pursue AI without establishing the essential foundations</h2>
+                <h2 class="section-title">Many SMEs pursue AI without establishing the essential foundations</h2>
             </div>
             <div class="problem-content">
                 <p class="problem-text">
@@ -926,7 +929,7 @@
             <p>Book your free 30-minute AI Readiness Consultation. We'll assess your current state, identify immediate opportunities and outline a practical path forward.</p>
             <div class="hero-buttons">
                 <a href="https://calendly.com/integroai-consulting/30min" class="cta-btn" target="_blank">
-                    <span>Book Your Free Discovery Call Today</span>
+                    <span>Schedule Your Free Consultation</span>
                 </a>
                 <a href="mailto:info.integroAI@consultant.com" class="cta-btn cta-btn-secondary">
                     <span>Contact Us</span>
@@ -940,7 +943,7 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <h3>IntegroAI Consulting</h3>
-                <p>AI Solutions Simplified. Helping businesses build strong foundations, find clarity and drive results through strategic AI integration with a human-in-the-loop approach.</p>
+                <p>AI Solutions Simplified. Helping SMEs build strong foundations, find clarity and drive results through strategic AI integration with a human-in-the-loop approach.</p>
             </div>
             <div class="footer-section">
                 <h4>Services</h4>
@@ -953,7 +956,7 @@
                 <h4>Company</h4>
                 <a href="#about">About Us</a>
                 <a href="#why">Why Us</a>
-                <a href="#contact">Contact Us</a>
+                <a href="#contact">Contact</a>
             </div>
             <div class="footer-section">
                 <h4>Get in Touch</h4>
@@ -1002,8 +1005,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
