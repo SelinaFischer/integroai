@@ -310,18 +310,15 @@
         }
 
         .section-description {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: var(--neutral);
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            line-height: 1.8;
-            font-weight: 400;
+            line-height: 1.7;
         }
 
         .section-dark .section-description {
             color: var(--secondary);
-            font-size: 1.3rem;
-            line-height: 1.9;
         }
 
         /* Problem Section */
@@ -538,11 +535,38 @@
             font-size: 1.1rem;
             display: inline-block;
             transition: all 0.3s;
+            margin: 0 0.5rem;
         }
 
         .cta-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .cta-btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .cta-email {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-email a {
+            color: var(--white);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .cta-email a:hover {
+            color: var(--secondary);
         }
 
         /* Footer */
@@ -641,6 +665,11 @@
 
             .footer-content {
                 grid-template-columns: 1fr;
+            }
+
+            .cta-btn {
+                display: block;
+                margin: 0.5rem auto;
             }
         }
 
@@ -891,7 +920,14 @@
         <div class="cta-content">
             <h2>Ready to Transform Your Business with AI?</h2>
             <p>Book your free 30-minute AI Readiness Consultation. We'll assess your current state, identify immediate opportunities and outline a practical path forward.</p>
-            <a href="https://calendly.com/integroai-consulting/30min" class="cta-btn" target="_blank">Schedule Your Free Consultation</a>
+            <div class="hero-buttons">
+                <a href="https://calendly.com/integroai-consulting/30min" class="cta-btn" target="_blank">
+                    <span>Schedule Your Free Consultation</span>
+                </a>
+                <a href="mailto:info.integroAI@consultant.com" class="cta-btn cta-btn-secondary">
+                    <span>Contact Us</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -918,7 +954,7 @@
             <div class="footer-section">
                 <h4>Get in Touch</h4>
                 <a href="https://calendly.com/integroai-consulting/30min" target="_blank">Book Consultation</a>
-                <a href="#contact">Get Started</a>
+                <a href="mailto:info.integroAI@consultant.com">Contact Us</a>
             </div>
         </div>
         <div class="footer-bottom">
