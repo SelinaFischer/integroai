@@ -26,8 +26,8 @@
 
         nav { position: fixed; top: 0; width: 100%; background: rgba(1, 47, 70, 0.98); backdrop-filter: blur(10px); padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
         .logo { display: flex; align-items: center; gap: 1rem; }
-        .logo-placeholder { width: 90px; height: 90px; }
-        .logo-placeholder img { width: 90px; height: 90px; object-fit: contain; }
+        .logo-placeholder { width: 70px; height: 70px; }
+        .logo-placeholder img { width: 70px; height: 70px; object-fit: contain; }
         .logo-text-container { display: flex; flex-direction: column; gap: 0.15rem; }
         .logo-text { font-size: 1.4rem; font-weight: 700; color: var(--white); }
         .logo-tagline { font-size: 0.85rem; color: var(--tagline-color); letter-spacing: 1.5px; }
@@ -37,7 +37,15 @@
         .nav-contact-btn { background: var(--accent); padding: 0.6rem 1.3rem; border-radius: 6px; font-weight: 600; opacity: 1 !important; }
         .nav-contact-btn:hover { background: var(--tagline-color); color: var(--primary); }
 
-        .hero { padding-top: 100px; background: var(--primary); color: var(--white); text-align: center; }
+        .hero { 
+            padding-top: 100px; 
+            background: linear-gradient(rgba(1, 47, 70, 0.85), rgba(1, 47, 70, 0.9)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: var(--white); 
+            text-align: center; 
+        }
         .hero-content { padding: 80px 8%; max-width: 850px; margin: 0 auto; }
         .hero-content h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 0.8rem; }
         .hero-tagline { font-size: 1.2rem; color: var(--tagline-color); font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 1px; }
@@ -196,7 +204,7 @@
     <nav>
         <div class="logo">
             <div class="logo-placeholder">
-                <img src="logo.png" alt="" onerror="this.style.visibility='hidden';">
+                <img src="logo.png" alt="IntegroAI Consulting Logo">
             </div>
             <div class="logo-text-container">
                 <span class="logo-text">IntegroAI Consulting</span>
@@ -563,5 +571,3 @@
     </script>
 </body>
 </html>
-
-
