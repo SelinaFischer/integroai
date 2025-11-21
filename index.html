@@ -24,20 +24,20 @@
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--white); color: var(--dark); line-height: 1.7; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
 
-        nav { position: fixed; top: 0; width: 100%; background: rgba(1, 47, 70, 0.98); backdrop-filter: blur(10px); padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
-        .logo { display: flex; align-items: center; gap: 0.8rem; }
-        .logo-placeholder { width: 50px; height: 50px; }
-        .logo-placeholder img { width: 50px; height: 50px; object-fit: contain; }
-        .logo-text-container { display: flex; flex-direction: column; gap: 0.1rem; }
-        .logo-text { font-size: 1rem; font-weight: 700; color: var(--white); }
-        .logo-tagline { font-size: 0.65rem; color: var(--tagline-color); letter-spacing: 1.5px; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(1, 47, 70, 0.98); backdrop-filter: blur(10px); padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+        .logo { display: flex; align-items: center; gap: 1rem; }
+        .logo-placeholder { width: 70px; height: 70px; }
+        .logo-placeholder img { width: 70px; height: 70px; object-fit: contain; }
+        .logo-text-container { display: flex; flex-direction: column; gap: 0.15rem; }
+        .logo-text { font-size: 1.4rem; font-weight: 700; color: var(--white); }
+        .logo-tagline { font-size: 0.85rem; color: var(--tagline-color); letter-spacing: 1.5px; }
         .nav-menu { display: flex; gap: 2rem; align-items: center; }
         .nav-menu a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; opacity: 0.9; }
         .nav-menu a:hover { color: var(--tagline-color); opacity: 1; }
         .nav-contact-btn { background: var(--accent); padding: 0.6rem 1.3rem; border-radius: 6px; font-weight: 600; opacity: 1 !important; }
         .nav-contact-btn:hover { background: var(--tagline-color); color: var(--primary); }
 
-        .hero { padding-top: 80px; background: var(--primary); color: var(--white); text-align: center; }
+        .hero { padding-top: 100px; background: var(--primary); color: var(--white); text-align: center; }
         .hero-content { padding: 80px 8%; max-width: 850px; margin: 0 auto; }
         .hero-content h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 0.8rem; }
         .hero-tagline { font-size: 1.2rem; color: var(--tagline-color); font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 1px; }
@@ -119,8 +119,29 @@
         .value-item h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 0.8rem; }
         .value-item p { font-size: 0.95rem; color: var(--neutral); line-height: 1.6; }
 
-        /* COLLAPSIBLE FAQ */
-        .faq-list { max-width: 800px; margin: 0 auto; }
+        /* COLLAPSIBLE SECTIONS */
+        .collapsible-section-header { cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 1rem; }
+        .collapsible-section-header:hover .collapsible-toggle { background: var(--accent); color: var(--white); }
+        .collapsible-toggle { width: 32px; height: 32px; border-radius: 50%; background: rgba(1, 47, 70, 0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--primary); transition: all 0.3s; font-weight: 300; }
+        .collapsible-section.active .collapsible-toggle { transform: rotate(45deg); }
+        .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; text-align: center; }
+        .collapsible-section.active .collapsible-content { max-height: 3000px; }
+        
+        /* About Section - Light warm tone */
+        .about-section { background: #f8f6f3; }
+        .about-section .collapsible-toggle { background: rgba(184, 152, 127, 0.2); }
+        
+        /* FAQ Section - Light cool tone */
+        .faq-section { background: #f0f4f7; }
+        .faq-section .faq-section-toggle { background: rgba(1, 47, 70, 0.1); }
+        
+        .faq-section-header { cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 1rem; }
+        .faq-section-header:hover .faq-section-toggle { background: var(--accent); color: var(--white); }
+        .faq-section-toggle { width: 32px; height: 32px; border-radius: 50%; background: var(--light-bg); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--primary); transition: all 0.3s; font-weight: 300; }
+        .faq-section.active .faq-section-toggle { transform: rotate(45deg); }
+        .faq-list-wrapper { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; }
+        .faq-section.active .faq-list-wrapper { max-height: 2000px; }
+        .faq-list { max-width: 800px; margin: 0 auto; padding-top: 2rem; text-align: left; }
         .faq-item { background: var(--white); border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.04); overflow: hidden; }
         .faq-question { padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; }
         .faq-question:hover { background: var(--light-bg); }
@@ -354,75 +375,77 @@
     </section>
 
     <!-- ABOUT (moved to bottom) -->
-    <section class="section section-white" id="about">
-        <div class="container">
-            <div class="section-header">
+    <section class="section about-section collapsible-section" id="about">
+        <div class="container" style="text-align: center;">
+            <div class="section-header collapsible-section-header" onclick="toggleAboutSection()">
                 <h2 class="section-title">About IntegroAI Consulting</h2>
-                <p class="section-description">IntegroAI Consulting helps organisations apply AI with clarity, structure and measurable outcomes. We support decision makers who want AI to strengthen strategy, people and operations without adding confusion.</p>
+                <span class="collapsible-toggle">+</span>
             </div>
-        </div>
-    </section>
+            <p class="section-description" style="margin-bottom: 0;">IntegroAI Consulting helps organisations apply AI with clarity, structure and measurable outcomes.</p>
+            <div class="collapsible-content">
+                <div style="padding-top: 2rem;">
+                    <p class="problem-statement">We support decision makers who use AI to strengthen strategy, build capability and improve operational performance.</p>
+                </div>
 
-    <!-- PHILOSOPHY -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="section-header"><h2 class="section-title">Our Philosophy</h2></div>
-            <p class="problem-statement">AI succeeds when strategy, data and people move together. Most organisations fail because they jump into tools without preparation. IntegroAI applies a simple principle. <strong>Clarity first. Tools second. Results that can be measured.</strong></p>
-        </div>
-    </section>
+                <!-- PHILOSOPHY -->
+                <div style="padding: 3rem 0; background: var(--light-bg); margin: 2rem -8%; padding-left: 8%; padding-right: 8%;">
+                    <div class="section-header"><h2 class="section-title">Our Philosophy</h2></div>
+                    <p class="problem-statement">AI succeeds when strategy, data and people move together. Most organisations fail because they jump into tools without preparation. IntegroAI applies a simple principle. <strong>Clarity first. Tools second. Results that can be measured.</strong></p>
+                </div>
 
-    <!-- VALUES - Enhanced with icons -->
-    <section class="section section-white">
-        <div class="container">
-            <div class="section-header"><h2 class="section-title">Our Values</h2></div>
-            <div class="values-grid">
-                <div class="value-item">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                <!-- VALUES -->
+                <div style="padding: 3rem 0;">
+                    <div class="section-header"><h2 class="section-title">Our Values</h2></div>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </div>
+                            <h3>Clarity</h3>
+                            <p>Clear communication and transparent processes that cut through complexity.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <h3>Integrity</h3>
+                            <p>Honest guidance and ethical practices that build lasting trust.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <h3>Capability</h3>
+                            <p>Deep expertise and practical skills that deliver real results.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <h3>Results</h3>
+                            <p>Measurable outcomes and accountable delivery that drive growth.</p>
+                        </div>
                     </div>
-                    <h3>Clarity</h3>
-                    <p>Clear communication and transparent processes that cut through complexity.</p>
                 </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3>Integrity</h3>
-                    <p>Honest guidance and ethical practices that build lasting trust.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                    </div>
-                    <h3>Capability</h3>
-                    <p>Deep expertise and practical skills that deliver real results.</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
-                    <h3>Results</h3>
-                    <p>Measurable outcomes and accountable delivery that drive growth.</p>
+
+                <!-- FOUNDER -->
+                <div style="padding: 3rem 0; background: var(--light-bg); margin: 0 -8%; padding-left: 8%; padding-right: 8%;">
+                    <div class="section-header"><h2 class="section-title">Founder Perspective</h2></div>
+                    <p class="problem-statement">IntegroAI is built on a commitment to help organisations use AI responsibly and effectively. Our mission is to simplify the complex, amplify what works and help teams grow with confidence.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- FOUNDER -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="section-header"><h2 class="section-title">Founder Perspective</h2></div>
-            <p class="problem-statement">IntegroAI is built on a commitment to help organisations use AI responsibly and effectively. Our mission is to simplify the complex, amplify what works and help teams grow with confidence.</p>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section section-white" id="faq">
-        <div class="container">
-            <div class="section-header">
+    <section class="section faq-section" id="faq">
+        <div class="container" style="text-align: center;">
+            <div class="section-header faq-section-header" onclick="toggleFaqSection()">
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-description">Clarity for every stage of your AI journey.</p>
+                <span class="faq-section-toggle">+</span>
             </div>
+            <p class="section-description" style="margin-bottom: 0;">Clarity for every stage of your AI journey.</p>
+            <div class="faq-list-wrapper">
             <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
@@ -488,6 +511,7 @@
                     <div class="faq-answer"><div class="faq-answer-content"><p>Book a Discovery Call to begin with clarity. We will explore your goals and define the first logical steps.</p></div></div>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
@@ -517,4 +541,25 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 IntegroAI Consulting. All rights reserved.
+            <p>© 2025 IntegroAI Consulting. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false">
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+        
+        function toggleFaqSection() {
+            const faqSection = document.querySelector('.faq-section');
+            faqSection.classList.toggle('active');
+        }
+        
+        function toggleAboutSection() {
+            const aboutSection = document.querySelector('.collapsible-section');
+            aboutSection.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
