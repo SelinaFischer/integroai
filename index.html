@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IntegroAI Consulting - Transform Your Business with Strategic AI</title>
+    <title>IntegroAI Consulting - AI Solutions Simplified</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --primary: #012f46;
-            --secondary: #edfefe;
             --neutral: #4a4a4a;
             --white: #ffffff;
             --accent: #b8987f;
@@ -24,817 +18,159 @@
             --dark: #1a1a1a;
             --light-bg: #fafbfc;
             --border-subtle: #e8e8e8;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--white);
-            color: var(--dark);
-            line-height: 1.7;
-            font-weight: 400;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-        }
-
-        /* IMPROVED TYPOGRAPHY SYSTEM */
-        h1 {
-            font-size: clamp(3rem, 6vw, 5.5rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-        }
-
-        h2 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-        }
-
-        h3 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 600;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(1, 47, 70, 0.98);
-            backdrop-filter: blur(10px);
-            padding: 1.2rem 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            box-shadow: 0 1px 0 rgba(255,255,255,0.1);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .logo img {
-            height: 85px;
-            width: auto;
-        }
-
-        .logo-text-container {
-            display: flex;
-            flex-direction: column;
-            gap: 0.2rem;
-        }
-
-        .logo-text {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: -0.3px;
-        }
-
-        .logo-tagline {
-            font-size: 0.7rem;
-            font-weight: 400;
-            color: var(--tagline-color);
-            letter-spacing: 1.5px;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .nav-menu a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s;
-            opacity: 0.9;
-        }
-
-        .nav-menu a:hover {
-            color: var(--tagline-color);
-            opacity: 1;
-        }
-
-        .nav-contact-btn {
-            background: var(--accent);
-            color: var(--white);
-            padding: 0.7rem 1.8rem;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.3s;
-            opacity: 1 !important;
-        }
-
-        .nav-contact-btn:hover {
-            background: var(--tagline-color);
-            color: var(--primary);
-            transform: translateY(-1px);
-        }
-
-        /* PREMIUM HERO SECTION - REBUILT FOR AUTHORITY */
-        .hero {
-            background: var(--primary);
-            color: var(--white);
-            padding: 180px 8% 120px;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            right: -15%;
-            top: -10%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(184, 152, 127, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-content {
-            max-width: 900px;
-        }
-
-        .hero-eyebrow {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--tagline-color);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 2rem;
-        }
-
-        .hero-content h1 {
-            margin-bottom: 2.5rem;
-            color: var(--white);
-        }
-
-        .hero-subtitle {
-            font-size: 1.4rem;
-            line-height: 1.7;
-            color: rgba(237, 254, 254, 0.9);
-            margin-bottom: 3rem;
-            font-weight: 300;
-            max-width: 750px;
-        }
-
-        /* Trust Indicators */
-        .trust-bar {
-            display: flex;
-            gap: 4rem;
-            margin: 4rem 0;
-            padding: 2.5rem 0;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .trust-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(184, 152, 127, 0.15);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .trust-icon svg {
-            width: 24px;
-            height: 24px;
-            stroke: var(--tagline-color);
-            fill: none;
-            stroke-width: 2;
-        }
-
-        .trust-text h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--white);
-            margin-bottom: 0.2rem;
-        }
-
-        .trust-text p {
-            font-size: 0.9rem;
-            color: rgba(237, 254, 254, 0.7);
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--white);
-            padding: 1.2rem 3rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.05rem;
-            transition: all 0.3s;
-            display: inline-block;
-            box-shadow: 0 4px 12px rgba(184, 152, 127, 0.3);
-        }
-
-        .btn-primary:hover {
-            background: var(--tagline-color);
-            color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(184, 152, 127, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            padding: 1.2rem 3rem;
-            border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05rem;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: var(--white);
-        }
-
-        /* IMPROVED SPACING SYSTEM - 50% MORE WHITE SPACE */
-        .section {
-            padding: 140px 8%;
-        }
-
-        .section-compact {
-            padding: 100px 8%;
-        }
-
-        .section-light {
-            background: var(--light-bg);
-        }
-
-        .section-white {
-            background: var(--white);
-        }
-
-        .section-dark {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-tag {
-            display: inline-block;
-            color: var(--accent);
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-title {
-            color: var(--primary);
-            margin-bottom: 2rem;
-        }
-
-        .section-dark .section-title {
-            color: var(--white);
-        }
-
-        .section-description {
-            font-size: 1.25rem;
-            color: var(--neutral);
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-        .section-dark .section-description {
-            color: rgba(237, 254, 254, 0.8);
-        }
-
-        /* WHAT MAKES US DIFFERENT - NEW SECTION */
-        .difference-section {
-            background: var(--white);
-            padding: 140px 8%;
-        }
-
-        .difference-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .positioning-statement {
-            font-size: 2rem;
-            font-weight: 300;
-            color: var(--primary);
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto 6rem;
-            line-height: 1.6;
-            font-style: italic;
-        }
-
-        .positioning-statement strong {
-            font-weight: 700;
-            color: var(--accent);
-        }
-
-        .difference-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4rem;
-            margin-top: 5rem;
-        }
-
-        .difference-item {
-            text-align: center;
-        }
-
-        .difference-number {
-            font-size: 4rem;
-            font-weight: 800;
-            color: var(--tagline-color);
-            opacity: 0.3;
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
-
-        .difference-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .difference-item p {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: var(--neutral);
-        }
-
-        /* MIXED LAYOUTS - REMOVING REPETITIVE CARDS */
-        .split-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8rem;
-            align-items: center;
-            margin-bottom: 8rem;
-        }
-
-        .split-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .split-section.reverse {
-            direction: rtl;
-        }
-
-        .split-section.reverse > * {
-            direction: ltr;
-        }
-
-        .split-content h3 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .split-content p {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: var(--neutral);
-            margin-bottom: 2rem;
-        }
-
-        .split-content ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .split-content li {
-            padding-left: 2.5rem;
-            position: relative;
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
-            color: var(--neutral);
-        }
-
-        .split-content li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: 900;
-            font-size: 1.3rem;
-            background: rgba(184, 152, 127, 0.15);
-            width: 26px;
-            height: 26px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-
-        .split-visual {
-            background: var(--light-bg);
-            padding: 3rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-subtle);
-        }
-
-        /* STATISTICS BLOCK */
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 3rem;
-            margin: 5rem 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2.5rem 1.5rem;
-            background: rgba(184, 152, 127, 0.05);
-            border-radius: 8px;
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--accent);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.95rem;
-            color: var(--neutral);
-            font-weight: 500;
-        }
-
-        /* FRAMEWORK SECTION - IMPROVED SPACING */
-        .framework-section {
-            padding: 140px 8%;
-            background: var(--light-bg);
-        }
-
-        .framework-header {
-            text-align: center;
-            margin-bottom: 6rem;
-            background: var(--white);
-            padding: 4rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
-            border: 1px solid var(--border-subtle);
-        }
-
-        .framework-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .framework-header p {
-            font-size: 1.2rem;
-            color: var(--neutral);
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-        /* Pyramid Structure - SIMPLIFIED */
-        .pyramid-container {
-            background: white;
-            padding: 5rem 4rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
-            margin-bottom: 6rem;
-            border: 1px solid var(--border-subtle);
-        }
-
-        .pyramid-title {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 4rem;
-            font-weight: 700;
-        }
-
-        .pyramid {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .pyramid-level {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 3px;
-        }
-
-        .pyramid-block {
-            padding: 1.8rem 1.2rem;
-            text-align: center;
-            border: 1px solid var(--border-subtle);
-            transition: all 0.3s;
-            cursor: pointer;
-            background: var(--white);
-        }
-
-        .pyramid-block:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .pyramid-block h3 {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .pyramid-block p {
-            font-size: 0.85rem;
-            line-height: 1.4;
-        }
-
-        /* Pyramid colors */
-        .level-roi {
-            background: #e5c9a8;
-            width: 200px;
-        }
-
-        .level-roi h3, .level-roi p {
-            color: var(--primary);
-        }
-
-        .level-innovation {
-            background: #d4b89a;
-            width: 220px;
-        }
-
-        .level-innovation h3, .level-innovation p {
-            color: var(--primary);
-        }
-
-        .level-execution {
-            background: #89898e;
-            width: 240px;
-        }
-
-        .level-execution h3, .level-execution p {
-            color: var(--white);
-        }
-
-        .level-implementation {
-            background: #4a4a4a;
-            width: 200px;
-        }
-
-        .level-implementation h3, .level-implementation p {
-            color: #e5c9a8;
-        }
-
-        .level-foundation {
-            background: var(--primary);
-            width: 200px;
-        }
-
-        .level-foundation h3, .level-foundation p {
-            color: #e5c9a8;
-        }
-
-        /* PREMIUM CTA - BOLD & CONFIDENT */
-        .cta-section {
-            background: var(--primary);
-            color: var(--white);
-            padding: 120px 8%;
-            text-align: center;
-        }
-
-        .cta-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .cta-content h2 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 2rem;
-            font-weight: 700;
-            color: var(--white);
-        }
-
-        .cta-content p {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            line-height: 1.7;
-            color: rgba(237, 254, 254, 0.9);
-            font-weight: 300;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .cta-btn {
-            background: var(--accent);
-            color: var(--white);
-            padding: 1.3rem 3.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: inline-block;
-            transition: all 0.3s;
-            box-shadow: 0 4px 16px rgba(184, 152, 127, 0.4);
-        }
-
-        .cta-btn:hover {
-            background: var(--tagline-color);
-            color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(184, 152, 127, 0.5);
-        }
-
-        .cta-btn-secondary {
-            background: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-        }
-
-        .cta-btn-secondary:hover {
-            background: var(--accent);
-            color: var(--white);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 80px 8% 40px;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 4rem;
-            padding-bottom: 4rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .footer-brand h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .footer-brand p {
-            color: rgba(255,255,255,0.6);
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-
-        .footer-section h4 {
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .footer-section a {
-            display: block;
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            margin-bottom: 0.8rem;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: var(--accent);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 3rem;
-            color: rgba(255,255,255,0.4);
-            font-size: 0.9rem;
-        }
+            --green: #bacbcb;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--white); color: var(--dark); line-height: 1.7; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+
+        nav { position: fixed; top: 0; width: 100%; background: rgba(1, 47, 70, 0.98); backdrop-filter: blur(10px); padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+        .logo { display: flex; align-items: center; gap: 0.8rem; }
+        .logo-placeholder { width: 50px; height: 50px; }
+        .logo-placeholder img { width: 50px; height: 50px; object-fit: contain; }
+        .logo-text-container { display: flex; flex-direction: column; gap: 0.1rem; }
+        .logo-text { font-size: 1rem; font-weight: 700; color: var(--white); }
+        .logo-tagline { font-size: 0.65rem; color: var(--tagline-color); letter-spacing: 1.5px; }
+        .nav-menu { display: flex; gap: 2rem; align-items: center; }
+        .nav-menu a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; opacity: 0.9; }
+        .nav-menu a:hover { color: var(--tagline-color); opacity: 1; }
+        .nav-contact-btn { background: var(--accent); padding: 0.6rem 1.3rem; border-radius: 6px; font-weight: 600; opacity: 1 !important; }
+        .nav-contact-btn:hover { background: var(--tagline-color); color: var(--primary); }
+
+        .hero { padding-top: 80px; background: var(--primary); color: var(--white); text-align: center; }
+        .hero-content { padding: 80px 8%; max-width: 850px; margin: 0 auto; }
+        .hero-content h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 0.8rem; }
+        .hero-tagline { font-size: 1.2rem; color: var(--tagline-color); font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 1px; }
+        .hero-subtitle { font-size: 1.15rem; color: rgba(237, 254, 254, 0.9); margin-bottom: 2.5rem; }
+        .hero-buttons { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+
+        .btn-primary { background: var(--accent); color: var(--white); padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s; display: inline-block; }
+        .btn-primary:hover { background: var(--tagline-color); color: var(--primary); transform: translateY(-2px); }
+        .btn-secondary { background: transparent; color: var(--white); padding: 1rem 2rem; border: 2px solid rgba(255,255,255,0.4); border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s; }
+        .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+
+        .section { padding: 100px 8%; }
+        .section-light { background: var(--light-bg); }
+        .section-white { background: var(--white); }
+        .section-dark { background: var(--primary); color: var(--white); }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--primary); margin-bottom: 1rem; }
+        .section-dark .section-title { color: var(--white); }
+        .section-description { font-size: 1.1rem; color: var(--neutral); max-width: 650px; margin: 0 auto; line-height: 1.8; }
+        .section-dark .section-description { color: rgba(237, 254, 254, 0.85); }
+
+        .journey-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        .journey-item { text-align: center; padding: 1.5rem 1rem; }
+        .journey-icon { width: 60px; height: 60px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.2rem; }
+        .journey-icon svg { width: 28px; height: 28px; stroke: var(--white); fill: none; stroke-width: 2; }
+        .journey-item h3 { font-size: 1.2rem; color: var(--primary); margin-bottom: 0.6rem; }
+        .journey-item p { font-size: 0.95rem; color: var(--neutral); line-height: 1.6; }
+
+        .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+        .problem-item { text-align: center; padding: 2rem 1.5rem; background: var(--primary); border-radius: 8px; transition: all 0.3s; }
+        .problem-item:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(1, 47, 70, 0.3); }
+        .problem-item h3 { font-size: 1.25rem; color: var(--white); font-weight: 700; }
+        .problem-statement { text-align: center; max-width: 700px; margin: 0 auto; font-size: 1.05rem; color: var(--neutral); line-height: 1.8; }
+        .problem-statement strong { color: var(--primary); }
+
+        .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .pillar-card { background: rgba(255, 255, 255, 0.05); padding: 2rem 1.5rem; border-radius: 8px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.1); }
+        .pillar-card h3 { font-size: 1.3rem; color: var(--tagline-color); margin-bottom: 0.8rem; }
+        .pillar-card p { font-size: 1rem; color: rgba(237, 254, 254, 0.85); line-height: 1.6; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .service-card { padding: 2rem; background: var(--white); border-radius: 8px; border-left: 4px solid var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,0.04); transition: all 0.3s; }
+        .service-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+        .service-card h3 { font-size: 1.15rem; color: var(--primary); margin-bottom: 0.6rem; }
+        .service-card p { font-size: 0.95rem; color: var(--neutral); line-height: 1.6; }
+
+        .service-detail { background: var(--white); border-radius: 8px; padding: 2.5rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.04); border-left: 4px solid var(--accent); }
+        .service-detail h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 0.8rem; }
+        .service-detail > p { font-size: 1.05rem; color: var(--neutral); margin-bottom: 1.5rem; }
+        .service-detail h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 0.8rem; font-weight: 600; }
+        .service-detail ul { list-style: none; padding: 0; margin-bottom: 1.5rem; }
+        .service-detail li { padding: 0.4rem 0; padding-left: 1.5rem; position: relative; color: var(--neutral); font-size: 0.95rem; }
+        .service-detail li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+        .outcome-box { background: var(--light-bg); padding: 1rem 1.5rem; border-radius: 6px; margin-top: 1rem; }
+        .outcome-box strong { color: var(--primary); }
+
+        /* PYRAMID FRAMEWORK */
+        .pyramid-container { display: flex; flex-direction: column; align-items: center; gap: 6px; max-width: 900px; margin: 0 auto; }
+        .pyramid-row { display: flex; gap: 6px; justify-content: center; }
+        .pyramid-block { padding: 1rem 1.2rem; text-align: center; font-size: 0.85rem; font-weight: 600; min-width: 140px; }
+        .pyramid-block .sub { font-size: 0.75rem; font-weight: 400; margin-top: 4px; opacity: 0.85; }
+        .grow-block { background: var(--tagline-color); color: var(--primary); }
+        .amplify-block { background: var(--green); color: var(--primary); }
+        .simplify-block { background: var(--primary); color: var(--white); }
+
+        /* VALUES SECTION - Enhanced */
+        .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem; margin: 3rem 0; }
+        .value-item { text-align: center; padding: 2.5rem 1.5rem; background: var(--white); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; }
+        .value-item:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .value-icon { width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary) 0%, #024a6d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
+        .value-icon svg { width: 40px; height: 40px; stroke: var(--tagline-color); fill: none; stroke-width: 1.5; }
+        .value-item h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 0.8rem; }
+        .value-item p { font-size: 0.95rem; color: var(--neutral); line-height: 1.6; }
+
+        /* COLLAPSIBLE FAQ */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: var(--white); border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.04); overflow: hidden; }
+        .faq-question { padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; }
+        .faq-question:hover { background: var(--light-bg); }
+        .faq-question h3 { font-size: 1.1rem; color: var(--primary); margin: 0; font-weight: 600; }
+        .faq-icon { font-size: 1.5rem; color: var(--accent); transition: transform 0.3s; font-weight: 300; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-answer-content { padding: 0 2rem 1.5rem; }
+        .faq-answer-content p { font-size: 1rem; color: var(--neutral); line-height: 1.7; }
+        .faq-answer-content ul { list-style: none; padding: 0; margin-top: 0.5rem; }
+        .faq-answer-content li { padding: 0.3rem 0; padding-left: 1.5rem; position: relative; color: var(--neutral); }
+        .faq-answer-content li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+        /* CTA SECTION */
+        .cta-section { background: var(--primary); color: var(--white); padding: 80px 8%; text-align: center; }
+        .cta-content { max-width: 750px; margin: 0 auto; }
+        .cta-content h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 1.5rem; }
+        .cta-content p { font-size: 1.1rem; margin-bottom: 2.5rem; color: rgba(237, 254, 254, 0.9); line-height: 1.7; }
+        .cta-buttons { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+
+        /* FOOTER */
+        footer { background: var(--dark); color: var(--white); padding: 60px 8% 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--white); }
+        .footer-brand p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.7; }
+        .footer-col h4 { font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.2rem; }
+        .footer-col a { display: block; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; margin-bottom: 0.8rem; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--tagline-color); }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: rgba(255,255,255,0.4); font-size: 0.85rem; }
 
-        /* Mobile Responsive */
         @media (max-width: 968px) {
-            .section, .section-compact {
-                padding: 80px 5%;
-            }
-
-            .hero {
-                padding: 140px 5% 80px;
-            }
-
-            .trust-bar {
-                flex-direction: column;
-                gap: 2rem;
-            }
-
-            .difference-grid,
-            .stats-row {
-                grid-template-columns: 1fr;
-            }
-
-            .split-section {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-
-            .pyramid-block {
-                width: 100% !important;
-                margin-bottom: 10px;
-            }
-
-            .pyramid-level {
-                flex-direction: column;
-                align-items: center;
-            }
+            .section { padding: 70px 5%; }
+            .journey-grid { grid-template-columns: repeat(2, 1fr); }
+            .problem-grid, .pillars-grid, .services-grid { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+            .nav-menu { gap: 1rem; }
+            .pyramid-block { padding: 0.7rem 0.8rem; font-size: 0.75rem; min-width: 100px; }
+            .pyramid-block .sub { font-size: 0.65rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
         }
-
-        /* MICRO INTERACTIONS & DEPTH */
-        .card-elevated {
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .card-elevated:hover {
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-            transform: translateY(-2px);
-        }
-
-        /* Smooth scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        @media (max-width: 600px) {
+            .journey-grid { grid-template-columns: 1fr; }
+            .hero-buttons, .cta-buttons { flex-direction: column; align-items: center; }
+            .values-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .pyramid-block { min-width: 60px; padding: 0.5rem; font-size: 0.65rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="logo">
-            <img src="logo.png" alt="IntegroAI Consulting Logo">
+            <div class="logo-placeholder">
+                <img src="logo.png" alt="" onerror="this.style.visibility='hidden';">
+            </div>
             <div class="logo-text-container">
                 <span class="logo-text">IntegroAI Consulting</span>
                 <span class="logo-tagline">Simplify • Amplify • Grow</span>
@@ -842,380 +178,378 @@
         </div>
         <div class="nav-menu">
             <a href="#home">Home</a>
-            <a href="#about">Approach</a>
+            <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#framework">Framework</a>
-            <a href="#contact" class="nav-contact-btn">Get Started</a>
+            <a href="#contact" class="nav-contact-btn">Contact</a>
         </div>
     </nav>
 
-    <!-- PREMIUM HERO SECTION - REBUILT -->
+    <!-- HERO -->
     <section class="hero" id="home">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-eyebrow">For Executives, Startups & SMEs</div>
-                <h1>Transform AI from Promise into Measurable Business Value</h1>
-                <p class="hero-subtitle">
-                    We don't just implement AI. We build the strategic foundations that make AI work. Clear data. Aligned teams. Practical execution. Results that scale.
-                </p>
-                
-                <!-- Trust Bar -->
-                <div class="trust-bar">
-                    <div class="trust-item">
-                        <div class="trust-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-                        </div>
-                        <div class="trust-text">
-                            <h4>Global Expert Network</h4>
-                            <p>Certified AI strategists</p>
-                        </div>
-                    </div>
-                    <div class="trust-item">
-                        <div class="trust-icon">
-                            <svg viewBox="0 0 24 24">
-                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                            </svg>
-                        </div>
-                        <div class="trust-text">
-                            <h4>Proven Framework</h4>
-                            <p>Foundation to ROI</p>
-                        </div>
-                    </div>
-                    <div class="trust-item">
-                        <div class="trust-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
-                        </div>
-                        <div class="trust-text">
-                            <h4>Human In The Loop</h4>
-                            <p>AI serving your goals</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="hero-content">
+            <h1>AI Solutions Simplified</h1>
+            <p class="hero-tagline">Discover. Strategise. Integrate. Grow.</p>
+            <p class="hero-subtitle">Supporting executives, startups and SMEs to apply AI with clarity, confidence and measurable results.</p>
+            <div class="hero-buttons">
+                <a href="https://calendly.com/integroai-consulting/30min" class="btn-primary" target="_blank">Book your AI Discovery Call</a>
+                <a href="#approach" class="btn-secondary">Explore our Approach</a>
+            </div>
+        </div>
+    </section>
 
-                <div class="hero-buttons">
-                    <a href="https://calendly.com/integroai-consulting/30min" class="btn-primary" target="_blank">Book Free 30-Min Discovery Call</a>
-                    <a href="#about" class="btn-secondary">See Our Approach</a>
+    <!-- JOURNEY -->
+    <section class="section section-white" id="approach">
+        <div class="container">
+            <div class="section-header"><h2 class="section-title">A clear journey for AI success</h2></div>
+            <div class="journey-grid">
+                <div class="journey-item">
+                    <div class="journey-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+                    <h3>Discover</h3>
+                    <p>Understand your current state and identify real opportunities.</p>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+                    <h3>Strategise</h3>
+                    <p>Define priorities and create a plan with achievable first steps.</p>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                    <h3>Implement</h3>
+                    <p>Turn ideas into solutions with guided implementation support.</p>
+                </div>
+                <div class="journey-item">
+                    <div class="journey-icon"><svg viewBox="0 0 24 24"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div>
+                    <h3>Grow</h3>
+                    <p>Measure progress, refine the approach and scale what works.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHAT MAKES US DIFFERENT -->
-    <section class="difference-section" id="services">
-        <div class="difference-content">
-            <div class="section-header">
-                <span class="section-tag">What Makes Us Different</span>
-                <h2 class="section-title">We See What Others Miss</h2>
+    <!-- WHY AI FAILS -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header"><h2 class="section-title">Why AI fails for many organisations</h2></div>
+            <div class="problem-grid">
+                <div class="problem-item"><h3>No clear priorities</h3></div>
+                <div class="problem-item"><h3>Weak data foundations</h3></div>
+                <div class="problem-item"><h3>Teams lack the skills to apply AI with confidence</h3></div>
             </div>
-            
-            <p class="positioning-statement">
-                Most consultancies sell <strong>AI tools</strong>. We deliver <strong>strategic clarity and execution foundations</strong> that make AI work because technology without structure is just expensive experimentation.
-            </p>
-
-            <div class="difference-grid">
-                <div class="difference-item fade-in">
-                    <div class="difference-number">01</div>
-                    <h3>Foundation First</h3>
-                    <p>We fix data infrastructure, team alignment, and process clarity before touching AI implementation. No shortcuts.</p>
-                </div>
-                <div class="difference-item fade-in">
-                    <div class="difference-number">02</div>
-                    <h3>Measured Outcomes</h3>
-                    <p>Every initiative ties to clear KPIs. We're accountable for business impact, not just deployment checklists.</p>
-                </div>
-                <div class="difference-item fade-in">
-                    <div class="difference-number">03</div>
-                    <h3>Human In The Loop</h3>
-                    <p>Technology serves your objectives. We ensure AI amplifies your team's capabilities, never replaces strategic thinking.</p>
-                </div>
-            </div>
+            <p class="problem-statement">Most organisations rush into AI without clarity, data readiness, team alignment, or proper AI governance. <strong>IntegroAI brings the structure that converts AI from ambition into results.</strong></p>
         </div>
     </section>
 
-    <!-- STRATEGIC APPROACH - MIXED LAYOUTS -->
-    <section class="section section-light" id="about">
+    <!-- FROM UNCERTAINTY -->
+    <section class="section section-dark">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Our Approach</span>
-                <h2 class="section-title">Strategy Before Solutions</h2>
-                <p class="section-description">
-                    AI fails when businesses skip the fundamentals. We start where others rush past, building the clarity and structure that sustainable AI success requires.
-                </p>
+                <h2 class="section-title">From uncertainty to confident execution</h2>
+                <p class="section-description">IntegroAI gives you structure, clarity and support across the full AI journey.</p>
             </div>
-
-            <!-- Split Layout 1 -->
-            <div class="split-section">
-                <div class="split-content">
-                    <h3>Assessment & Strategic Clarity</h3>
-                    <p>We identify what's holding you back before recommending what to build. Data quality. Process gaps. Team readiness. These aren't minor details. They're the foundation.</p>
-                    <ul>
-                        <li>Comprehensive infrastructure audit</li>
-                        <li>Gap analysis across data, people, and processes</li>
-                        <li>Risk assessment and mitigation planning</li>
-                    </ul>
-                </div>
-                <div class="split-visual card-elevated">
-                    <div class="stats-row" style="grid-template-columns: 1fr 1fr;">
-                        <div class="stat-item">
-                            <div class="stat-number">87%</div>
-                            <div class="stat-label">Projects fail without foundations</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">3x</div>
-                            <div class="stat-label">Faster ROI with structure</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Split Layout 2 -->
-            <div class="split-section reverse">
-                <div class="split-content">
-                    <h3>Roadmapping & Execution Planning</h3>
-                    <p>Clear priorities. Realistic timelines. Resource allocation that actually works. We build implementation plans that survive contact with reality.</p>
-                    <ul>
-                        <li>Phased rollout strategies</li>
-                        <li>Success metrics and KPI frameworks</li>
-                        <li>Change management protocols</li>
-                    </ul>
-                </div>
-                <div class="split-visual card-elevated">
-                    <div style="padding: 2rem;">
-                        <h4 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 2rem;">Strategic Planning</h4>
-                        <div style="display: grid; gap: 1rem;">
-                            <div style="padding: 1rem; background: rgba(184, 152, 127, 0.05); border-radius: 6px; border-left: 3px solid var(--accent);">
-                                <strong style="color: var(--primary);">Impact vs. Effort</strong>
-                                <p style="margin-top: 0.5rem; color: var(--neutral); font-size: 0.9rem;">Prioritize high-value initiatives</p>
-                            </div>
-                            <div style="padding: 1rem; background: rgba(184, 152, 127, 0.05); border-radius: 6px; border-left: 3px solid var(--accent);">
-                                <strong style="color: var(--primary);">Timeline Development</strong>
-                                <p style="margin-top: 0.5rem; color: var(--neutral); font-size: 0.9rem;">Realistic milestone planning</p>
-                            </div>
-                            <div style="padding: 1rem; background: rgba(184, 152, 127, 0.05); border-radius: 6px; border-left: 3px solid var(--accent);">
-                                <strong style="color: var(--primary);">Resource Allocation</strong>
-                                <p style="margin-top: 0.5rem; color: var(--neutral); font-size: 0.9rem;">Optimized team deployment</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Split Layout 3 -->
-            <div class="split-section">
-                <div class="split-content">
-                    <h3>Implementation & Continuous Optimization</h3>
-                    <p>We manage deployment with structure and oversight. Iterative refinement. Performance tracking. Team enablement. Your AI initiatives deliver and keep delivering.</p>
-                    <ul>
-                        <li>Structured pilot programs</li>
-                        <li>Integration management</li>
-                        <li>Ongoing performance monitoring</li>
-                    </ul>
-                </div>
-                <div class="split-visual card-elevated">
-                    <div style="padding: 2rem;">
-                        <h4 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 2rem;">Delivery Process</h4>
-                        <div style="display: grid; gap: 1rem;">
-                            <div style="padding: 1rem; background: rgba(1, 47, 70, 0.05); border-radius: 6px; border-left: 3px solid var(--primary);">
-                                <strong style="color: var(--primary);">Pilot Deployment</strong>
-                                <p style="margin-top: 0.5rem; color: var(--neutral); font-size: 0.9rem;">Controlled rollout & testing</p>
-                            </div>
-                            <div style="padding: 1rem; background: rgba(1, 47, 70, 0.05); border-radius: 6px; border-left: 3px solid var(--primary);">
-                                <strong style="color: var(--primary);">Performance Tracking</strong>
-                                <p style="margin-top: 0.5rem; color: var(--neutral); font-size: 0.9rem;">Real-time metrics & KPIs</p>
-                            </div>
-                            <div style="padding: 1rem; background: rgba(1, 47, 70, 0.05); border-radius: 6px; border-left: 3px solid var(--primary);">
-                                <strong style="color: var(--primary);">Continuous Refinement</strong>
-                                <p style="margin-top: 0.5rem; color: var(--neutral); font-size: 0.9rem;">Iterative optimization cycles</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="pillars-grid">
+                <div class="pillar-card"><h3>Strategy</h3><p>Clarity before tools.</p></div>
+                <div class="pillar-card"><h3>Foundations</h3><p>Data, governance and team readiness.</p></div>
+                <div class="pillar-card"><h3>Execution</h3><p>Practical delivery and adoption support.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- FRAMEWORK SECTION -->
-    <section class="framework-section" id="framework">
+    <!-- SERVICES OVERVIEW -->
+    <section class="section section-white" id="services">
         <div class="container">
-            <div class="framework-header">
-                <h2>IntegroAI Framework: From Foundation to ROI</h2>
-                <p>Our proven methodology combines strategic foundation-building with iterative implementation to deliver measurable AI success</p>
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-description">Clear structure. Practical support. Measurable outcomes.</p>
             </div>
+            <div class="services-grid">
+                <div class="service-card"><h3>Assessment and readiness</h3><p>Current state review, gap analysis, readiness evaluation.</p></div>
+                <div class="service-card"><h3>Strategy and roadmapping</h3><p>Use case prioritisation, impact and effort analysis, roadmap development.</p></div>
+                <div class="service-card"><h3>Training and capability building</h3><p>Executive sessions, team workshops, hands on use case training.</p></div>
+                <div class="service-card"><h3>Implementation oversight</h3><p>Pilot support, process design, tool supervision, change adoption.</p></div>
+            </div>
+        </div>
+    </section>
 
-            <!-- AI Pyramid -->
+    <!-- SERVICES DETAIL -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="service-detail">
+                <h3>Assessment and Readiness</h3>
+                <p>Understand your current state and evaluate realistic opportunities for AI.</p>
+                <h4>What this includes</h4>
+                <ul><li>Current state review</li><li>Pain point identification</li><li>Data and process assessment</li><li>AI readiness evaluation</li></ul>
+                <div class="outcome-box"><strong>Outcome:</strong> A clear picture of where you are today and what is possible next.</div>
+            </div>
+            <div class="service-detail">
+                <h3>Strategy and Roadmapping</h3>
+                <p>Define priorities and build a practical pathway for delivery.</p>
+                <h4>What this includes</h4>
+                <ul><li>Use case identification</li><li>Impact and effort analysis</li><li>Prioritisation of quick wins</li><li>AI strategy roadmap</li></ul>
+                <div class="outcome-box"><strong>Outcome:</strong> A focused plan that moves your organisation forward with confidence.</div>
+            </div>
+            <div class="service-detail">
+                <h3>Training and Capability Building</h3>
+                <p>Help leaders and teams understand how to use AI in daily work.</p>
+                <h4>What this includes</h4>
+                <ul><li>Executive awareness sessions</li><li>Team workshops</li><li>Use case training</li><li>Hands on guidance</li></ul>
+                <div class="outcome-box"><strong>Outcome:</strong> Teams who can apply AI with clarity and confidence.</div>
+            </div>
+            <div class="service-detail">
+                <h3>Implementation and Oversight</h3>
+                <p>Support delivery with structure, discipline and guided execution.</p>
+                <h4>What this includes</h4>
+                <ul><li>Pilot support</li><li>Workflow and process design</li><li>Tool supervision</li><li>Change and adoption support</li></ul>
+                <div class="outcome-box"><strong>Outcome:</strong> Solutions delivered with clarity, structure and accountability.</div>
+            </div>
+            <div class="service-detail">
+                <h3>Continuous Growth and Improvement</h3>
+                <p>Refine what works and scale value across the organisation.</p>
+                <h4>What this includes</h4>
+                <ul><li>Outcome measurement</li><li>Iteration and refinement</li><li>Scaling successful use cases</li><li>Long term capability building</li></ul>
+                <div class="outcome-box"><strong>Outcome:</strong> Sustained progress and measurable business value.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRAMEWORK -->
+    <section class="section section-white" id="framework">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simplify • Amplify • Grow Framework</h2>
+                <p class="section-description">A structured model that aligns foundations, execution and measurable business value.</p>
+            </div>
             <div class="pyramid-container">
-                <h2 class="pyramid-title">Simplify • Amplify • Grow Framework</h2>
-                <div class="pyramid">
-                    <!-- Top Level: ROI -->
-                    <div class="pyramid-level">
-                        <div class="pyramid-block level-roi">
-                            <h3>ROI</h3>
-                            <p>Measurable business value</p>
-                        </div>
-                    </div>
-
-                    <!-- Second Level: Innovation & KPIs -->
-                    <div class="pyramid-level">
-                        <div class="pyramid-block level-innovation">
-                            <h3>Innovation</h3>
-                            <p>Competitive advantage</p>
-                        </div>
-                        <div class="pyramid-block level-innovation">
-                            <h3>KPIs</h3>
-                            <p>Success metrics</p>
-                        </div>
-                    </div>
-
-                    <!-- Third Level: Execution -->
-                    <div class="pyramid-level">
-                        <div class="pyramid-block level-execution">
-                            <h3>Partners</h3>
-                            <p>Expert network</p>
-                        </div>
-                        <div class="pyramid-block level-execution">
-                            <h3>Governance</h3>
-                            <p>Structure & oversight</p>
-                        </div>
-                        <div class="pyramid-block level-execution">
-                            <h3>Risk Management</h3>
-                            <p>Mitigation strategies</p>
-                        </div>
-                    </div>
-
-                    <!-- Fourth Level: Implementation -->
-                    <div class="pyramid-level">
-                        <div class="pyramid-block level-implementation">
-                            <h3>Pilots & Use Cases</h3>
-                            <p>Proof of concept</p>
-                        </div>
-                        <div class="pyramid-block level-implementation">
-                            <h3>Process Simplification</h3>
-                            <p>Automation</p>
-                        </div>
-                        <div class="pyramid-block level-implementation">
-                            <h3>Development</h3>
-                            <p>Iterative approach</p>
-                        </div>
-                        <div class="pyramid-block level-implementation">
-                            <h3>Change Management</h3>
-                            <p>Adoption enablement</p>
-                        </div>
-                    </div>
-
-                    <!-- Bottom Level: Foundation -->
-                    <div class="pyramid-level">
-                        <div class="pyramid-block level-foundation">
-                            <h3>Strategic Alignment</h3>
-                            <p>Business goals</p>
-                        </div>
-                        <div class="pyramid-block level-foundation">
-                            <h3>Data Quality</h3>
-                            <p>Infrastructure prep</p>
-                        </div>
-                        <div class="pyramid-block level-foundation">
-                            <h3>Executive Leadership</h3>
-                            <p>Sponsorship</p>
-                        </div>
-                        <div class="pyramid-block level-foundation">
-                            <h3>Tech Scalability</h3>
-                            <p>Infrastructure</p>
-                        </div>
-                        <div class="pyramid-block level-foundation">
-                            <h3>Talent & Culture</h3>
-                            <p>Capability building</p>
-                        </div>
-                    </div>
+                <div class="pyramid-row">
+                    <div class="pyramid-block grow-block">ROI<div class="sub">Measurable business value</div></div>
+                </div>
+                <div class="pyramid-row">
+                    <div class="pyramid-block grow-block">Innovation<div class="sub">Competitive advantage</div></div>
+                    <div class="pyramid-block grow-block">KPIs<div class="sub">Success metrics</div></div>
+                </div>
+                <div class="pyramid-row">
+                    <div class="pyramid-block amplify-block">Partners<div class="sub">Expert network</div></div>
+                    <div class="pyramid-block amplify-block">Governance<div class="sub">Structure & oversight</div></div>
+                    <div class="pyramid-block amplify-block">Risk Management<div class="sub">Mitigation strategies</div></div>
+                </div>
+                <div class="pyramid-row">
+                    <div class="pyramid-block amplify-block">Pilots & Use Cases<div class="sub">Proof of concept</div></div>
+                    <div class="pyramid-block amplify-block">Process Simplification<div class="sub">Automation</div></div>
+                    <div class="pyramid-block amplify-block">Development<div class="sub">Iterative approach</div></div>
+                    <div class="pyramid-block amplify-block">Change Management<div class="sub">Adoption enablement</div></div>
+                </div>
+                <div class="pyramid-row">
+                    <div class="pyramid-block simplify-block">Strategic Alignment<div class="sub">Business goals</div></div>
+                    <div class="pyramid-block simplify-block">Data Quality<div class="sub">Infrastructure prep</div></div>
+                    <div class="pyramid-block simplify-block">Executive Leadership<div class="sub">Sponsorship</div></div>
+                    <div class="pyramid-block simplify-block">Tech Scalability<div class="sub">Infrastructure</div></div>
+                    <div class="pyramid-block simplify-block">Talent & Culture<div class="sub">Capability building</div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PREMIUM CTA SECTION -->
+    <!-- WHY CLIENTS CHOOSE -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Clients Choose IntegroAI</h2>
+                <p class="section-description">We work with a global network of certified AI consultants, strategists and implementation specialists. This collective capability gives clients expert support at every stage of the AI journey.</p>
+            </div>
+            <div class="pillars-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="pillar-card"><h3>Strategic depth</h3></div>
+                <div class="pillar-card"><h3>Strong foundations</h3></div>
+                <div class="pillar-card"><h3>Confident execution</h3></div>
+                <div class="pillar-card"><h3>Accountable delivery</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW WE WORK -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-header"><h2 class="section-title">How We Work</h2></div>
+            <p class="problem-statement">Our work starts with discovery to establish clarity and direction. We assess the current state, audit existing processes, and pinpoint the bottlenecks before recommending solutions. This ensures outcomes that are measurable and grounded in evidence.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
     <section class="cta-section" id="contact">
         <div class="cta-content">
             <h2>Ready to Make AI Work for Your Business?</h2>
             <p>Book your free 30-minute AI Readiness Consultation. We'll assess your current state, identify immediate opportunities, and outline a practical path forward.</p>
             <div class="cta-buttons">
-                <a href="https://calendly.com/integroai-consulting/30min" class="cta-btn" target="_blank">
-                    Book Your Free Discovery Call
-                </a>
-                <a href="mailto:info.integroai@consultant.com" class="cta-btn cta-btn-secondary">
-                    Contact Us
-                </a>
+                <a href="https://calendly.com/integroai-consulting/30min" class="btn-primary" target="_blank">Book Your Free Discovery Call</a>
+                <a href="/cdn-cgi/l/email-protection#da93b4aebfbda8b59b939ab9b5b4a9afb6aebbb4aef4b9b5b7" class="btn-secondary">Contact Us</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ABOUT (moved to bottom) -->
+    <section class="section section-white" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About IntegroAI Consulting</h2>
+                <p class="section-description">IntegroAI Consulting helps organisations apply AI with clarity, structure and measurable outcomes. We support decision makers who want AI to strengthen strategy, people and operations without adding confusion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header"><h2 class="section-title">Our Philosophy</h2></div>
+            <p class="problem-statement">AI succeeds when strategy, data and people move together. Most organisations fail because they jump into tools without preparation. IntegroAI applies a simple principle. <strong>Clarity first. Tools second. Results that can be measured.</strong></p>
+        </div>
+    </section>
+
+    <!-- VALUES - Enhanced with icons -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-header"><h2 class="section-title">Our Values</h2></div>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    </div>
+                    <h3>Clarity</h3>
+                    <p>Clear communication and transparent processes that cut through complexity.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>Honest guidance and ethical practices that build lasting trust.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Capability</h3>
+                    <p>Deep expertise and practical skills that deliver real results.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h3>Results</h3>
+                    <p>Measurable outcomes and accountable delivery that drive growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUNDER -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header"><h2 class="section-title">Founder Perspective</h2></div>
+            <p class="problem-statement">IntegroAI is built on a commitment to help organisations use AI responsibly and effectively. Our mission is to simplify the complex, amplify what works and help teams grow with confidence.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-white" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Clarity for every stage of your AI journey.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What types of organisations do you support?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-content"><p>Executives, startups and SMEs that want to use AI responsibly and effectively.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What results can I expect?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-content"><ul><li>Clarity on strategy</li><li>Better decisions about opportunities</li><li>Improved team capability</li><li>Practical delivery and measurable progress</li></ul></div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do I need technical knowledge?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-content"><p>No. IntegroAI simplifies AI for leaders and teams. You only need readiness to explore what is possible.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How does the Discovery call work?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-content"><p>A thirty minute conversation to understand your goals and challenges. You will receive clear guidance and practical next steps.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you work with specific AI tools?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-content"><p>We prioritise strategy and strong foundations. Tools are recommended only when your needs are clear.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you offer training?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-content"><p>Yes.</p><ul><li>Executive sessions</li><li>Team workshops</li><li>Use case training</li></ul></div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What is your approach to implementation?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-content"><p>Structured. Responsible. Guided.</p><ul><li>Pilots</li><li>Process design</li><li>Vendor or tool supervision</li><li>Adoption support</li></ul></div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you work remotely?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-content"><p>Yes. We support clients globally.</p></div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How do I get started?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer"><div class="faq-answer-content"><p>Book a Discovery Call to begin with clarity. We will explore your goals and define the first logical steps.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <div class="footer-content">
+        <div class="footer-grid">
             <div class="footer-brand">
                 <h3>IntegroAI Consulting</h3>
                 <p>Transforming AI from promise into measurable business value through strategic foundations, clear execution, and human-centered implementation.</p>
             </div>
-            <div class="footer-section">
+            <div class="footer-col">
                 <h4>Services</h4>
-                <a href="#about">Assessment & Auditing</a>
-                <a href="#about">Strategy & Roadmapping</a>
-                <a href="#about">Implementation</a>
+                <a href="#services">Assessment & Auditing</a>
+                <a href="#services">Strategy & Roadmapping</a>
+                <a href="#services">Implementation</a>
             </div>
-            <div class="footer-section">
+            <div class="footer-col">
                 <h4>Company</h4>
-                <a href="#about">Our Approach</a>
+                <a href="#approach">Our Approach</a>
                 <a href="#framework">Framework</a>
                 <a href="#contact">Contact</a>
             </div>
-            <div class="footer-section">
+            <div class="footer-col">
                 <h4>Get Started</h4>
                 <a href="https://calendly.com/integroai-consulting/30min" target="_blank">Book Consultation</a>
-                <a href="mailto:info.integroai@consultant.com">Email Us</a>
+                <a href="/cdn-cgi/l/email-protection#70191e161f5e191e041517021f111930131f1e03051c04111e045e131f1d">Email Us</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 IntegroAI Consulting. All rights reserved.</p>
+            <p>© 2025 IntegroAI Consulting. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offset = 100;
-                    const targetPosition = target.offsetTop - offset;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Fade-in animation
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const handleScroll = () => {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('visible');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
-    </script>
-</body>
-</html>
+    <script data-cfasync="false" src="/cdn-c
