@@ -24,20 +24,20 @@
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--white); color: var(--dark); line-height: 1.7; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
 
-        nav { position: fixed; top: 0; width: 100%; background: rgba(1, 47, 70, 0.98); backdrop-filter: blur(10px); padding: 0.5rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; min-height: 100px; }
-        .logo { display: flex; align-items: center; gap: 1rem; }
-        .logo-placeholder { width: 90px; height: 90px; }
-        .logo-placeholder img { width: 90px; height: 90px; object-fit: contain; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(1, 47, 70, 0.98); backdrop-filter: blur(10px); padding: 1rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+        .logo { display: flex; align-items: center; gap: 0.8rem; }
+        .logo-placeholder { width: 50px; height: 50px; }
+        .logo-placeholder img { width: 50px; height: 50px; object-fit: contain; }
         .logo-text-container { display: flex; flex-direction: column; gap: 0.1rem; }
-        .logo-text { font-size: 1.4rem; font-weight: 700; color: var(--white); }
-        .logo-tagline { font-size: 0.8rem; color: var(--tagline-color); letter-spacing: 1.5px; }
+        .logo-text { font-size: 1rem; font-weight: 700; color: var(--white); }
+        .logo-tagline { font-size: 0.65rem; color: var(--tagline-color); letter-spacing: 1.5px; }
         .nav-menu { display: flex; gap: 2rem; align-items: center; }
         .nav-menu a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; opacity: 0.9; }
         .nav-menu a:hover { color: var(--tagline-color); opacity: 1; }
         .nav-contact-btn { background: var(--accent); padding: 0.6rem 1.3rem; border-radius: 6px; font-weight: 600; opacity: 1 !important; }
         .nav-contact-btn:hover { background: var(--tagline-color); color: var(--primary); }
 
-        .hero { padding-top: 100px; background: var(--primary); color: var(--white); text-align: center; }
+        .hero { padding-top: 80px; background: var(--primary); color: var(--white); text-align: center; }
         .hero-content { padding: 80px 8%; max-width: 850px; margin: 0 auto; }
         .hero-content h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 0.8rem; }
         .hero-tagline { font-size: 1.2rem; color: var(--tagline-color); font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 1px; }
@@ -67,12 +67,18 @@
         .journey-item h3 { font-size: 1.2rem; color: var(--primary); margin-bottom: 0.6rem; }
         .journey-item p { font-size: 0.95rem; color: var(--neutral); line-height: 1.6; }
 
-        .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+        .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.5rem; }
+        .problem-grid-bottom { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 66%; margin: 0 auto 3rem; }
         .problem-item { text-align: center; padding: 2rem 1.5rem; background: var(--primary); border-radius: 8px; transition: all 0.3s; }
         .problem-item:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(1, 47, 70, 0.3); }
-        .problem-item h3 { font-size: 1.25rem; color: var(--white); font-weight: 700; }
-        .problem-statement { text-align: center; max-width: 700px; margin: 0 auto; font-size: 1.05rem; color: var(--neutral); line-height: 1.8; }
+        .problem-item h3 { font-size: 1.15rem; color: var(--white); font-weight: 600; }
+        .problem-statement { text-align: center; max-width: 750px; margin: 0 auto; font-size: 1.05rem; color: var(--neutral); line-height: 1.8; }
         .problem-statement strong { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .problem-grid { grid-template-columns: 1fr; }
+            .problem-grid-bottom { grid-template-columns: 1fr; max-width: 100%; }
+        }
 
         .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
         .pillar-card { background: rgba(255, 255, 255, 0.05); padding: 2rem 1.5rem; border-radius: 8px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.1); }
@@ -188,7 +194,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>AI Solutions Simplified</h1>
-            <p class="hero-tagline">Discover · Strategise · Implement · Grow</p>
+            <p class="hero-tagline">Discover. Strategise. Integrate. Grow.</p>
             <p class="hero-subtitle">Supporting executives, startups and SMEs to apply AI with clarity, confidence and measurable results.</p>
             <div class="hero-buttons">
                 <a href="https://calendly.com/integroai-consulting/30min" class="btn-primary" target="_blank">Book your AI Discovery Call</a>
@@ -231,11 +237,15 @@
         <div class="container">
             <div class="section-header"><h2 class="section-title">Why AI fails for many organisations</h2></div>
             <div class="problem-grid">
+                <div class="problem-item"><h3>Leadership not driving the AI agenda</h3></div>
                 <div class="problem-item"><h3>No clear priorities</h3></div>
                 <div class="problem-item"><h3>Weak data foundations</h3></div>
-                <div class="problem-item"><h3>Teams unsure how to apply AI confidently</h3></div>
             </div>
-            <p class="problem-statement">Most organisations jump straight into tools without the preparation needed for real value. <strong>IntegroAI provides the structure to do it properly.</strong></p>
+            <div class="problem-grid-bottom">
+                <div class="problem-item"><h3>Teams unsure how to apply AI</h3></div>
+                <div class="problem-item"><h3>No defined success metrics</h3></div>
+            </div>
+            <p class="problem-statement">Most organisations push ahead with implementation without addressing the real problems. <strong>IntegroAI provides the structure, discipline, and clarity required to make AI deliver measurable outcomes.</strong></p>
         </div>
     </section>
 
@@ -254,7 +264,7 @@
         </div>
     </section>
 
-    <!-- SERVICES OVERVIEW -->
+    <!-- SERVICES -->
     <section class="section section-white" id="services">
         <div class="container">
             <div class="section-header">
@@ -262,10 +272,10 @@
                 <p class="section-description">Clear structure. Practical support. Measurable outcomes.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card"><h3>Assessment and readiness</h3><p>Current state review, gap analysis, readiness evaluation.</p></div>
-                <div class="service-card"><h3>Strategy and roadmapping</h3><p>Use case prioritisation, impact and effort analysis, roadmap development.</p></div>
-                <div class="service-card"><h3>Training and capability building</h3><p>Executive sessions, team workshops, hands on use case training.</p></div>
-                <div class="service-card"><h3>Implementation oversight</h3><p>Pilot support, process design, tool supervision, change adoption.</p></div>
+                <div class="service-card"><h3>Assessment and Readiness</h3><p>Understand your current state, identify pain points, and evaluate realistic AI opportunities. Walk away with a clear picture of what's possible.</p></div>
+                <div class="service-card"><h3>Strategy and Roadmapping</h3><p>Prioritise use cases, analyse impact vs effort, and build a focused plan that moves your organisation forward with confidence.</p></div>
+                <div class="service-card"><h3>Training and Capability Building</h3><p>Executive sessions, team workshops, and hands-on guidance so your people can apply AI with clarity and confidence.</p></div>
+                <div class="service-card"><h3>Implementation Oversight</h3><p>Pilot support, process design, and adoption guidance to ensure solutions are delivered with structure and accountability.</p></div>
             </div>
         </div>
     </section>
@@ -503,8 +513,8 @@
             <div class="footer-col">
                 <h4>Get Started</h4>
                 <a href="https://calendly.com/integroai-consulting/30min" target="_blank">Book Consultation</a>
-                <a href="mailto:info.integroai@consultant.com">Email Us</a>
+               <a href="mailto:info.integroai@consultant.com">Email Us</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 IntegroAI Consult
+            <p>© 2025 IntegroAI Consulting. All rights reserved.
