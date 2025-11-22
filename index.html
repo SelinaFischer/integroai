@@ -50,7 +50,7 @@
             text-align: center; 
         }
         .hero-content { padding: 80px 8%; max-width: 850px; margin: 0 auto; }
-        .hero-content h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 0.8rem; }
+        .hero-content h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 0.8rem; white-space: nowrap; }
         .hero-tagline { font-size: 1.2rem; color: var(--tagline-color); font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 1px; }
         .hero-subtitle { font-size: 1.15rem; color: rgba(237, 254, 254, 0.9); margin-bottom: 2.5rem; }
         .hero-buttons { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
@@ -556,7 +556,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false">
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false">
         function toggleFaq(element) {
             const faqItem = element.parentElement;
             faqItem.classList.toggle('active');
@@ -567,10 +567,4 @@
             faqSection.classList.toggle('active');
         }
         
-        function toggleAboutSection() {
-            const aboutSection = document.querySelector('.collapsible-section');
-            aboutSection.classList.toggle('active');
-        }
-    </script>
-</body>
-</html>
+        fun
