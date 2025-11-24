@@ -10,11 +10,11 @@ The website uses a simple, maintainable stack optimised for fast deployment and 
 
 | Component | Technology | Description |
 | :--- | :--- | :--- |
-| **Frontend** | HTML5 / CSS3 / Vanilla JS | [cite_start]Single-page structure with CSS variables and minimal JS [cite: 34-36] |
-| **Typography** | Google Fonts | [cite_start]Inter font family (Weights: 300-800) [cite: 37, 111-112] |
-| **Hosting** | GitHub Pages | [cite_start]Free static site hosting [cite: 39] |
-| **DNS/SSL** | Cloudflare | [cite_start]DNS management and SSL enforcement [cite: 40] |
-| **Integrations** | Calendly | [cite_start]Discovery call booking system [cite: 43] |
+| **Frontend** | HTML5 / CSS3 / Vanilla JS | Single-page structure with CSS variables and minimal JS  |
+| **Typography** | Google Fonts | Inter font family (Weights: 300-800) |
+| **Hosting** | GitHub Pages | Free static site hosting  |
+| **DNS/SSL** | Cloudflare | DNS management and SSL enforcement |
+| **Integrations** | Calendly | Discovery call booking system |
 
 ---
 
@@ -22,19 +22,19 @@ The website uses a simple, maintainable stack optimised for fast deployment and 
 <details>
 <summary><b>Click to view file structure</b></summary>
 
-[cite_start]The GitHub repository is organised as follows[cite: 46]:
+The GitHub repository is organised as follows:
 
 ```text
 /integroai/
-├── index.html          → Main website file [cite: 48]
-├── logo.png            → Company logo (nav bar) [cite: 49]
-├── CNAME               → Custom domain config [cite: 50]
-├── favicons/           → Browser tab icons [cite: 51]
+├── index.html          → Main website file 
+├── logo.png            → Company logo (nav bar) 
+├── CNAME               → Custom domain config 
+├── favicons/           → Browser tab icons 
 │   ├── favicon.ico
 │   ├── favicon-32x32.png
 │   └── apple-touch-icon.png
-└── images/             → Website images [cite: 55]
-    └── hero-bg.png     → Hero background [cite: 56]
+└── images/             → Website images 
+    └── hero-bg.png     → Hero background 
 Naming Conventions:
 
 Use lowercase for all filenames.
@@ -110,8 +110,7 @@ To reduce page length while keeping content accessible, the "About" and "FAQ" se
 
 JavaScript
 
-// Example Logic [cite: 160]
-function toggleAboutSection() {
+// Example Logic unction toggleAboutSection() {
   const section = document.querySelector('.collapsible-section');
   section.classList.toggle('active');
 }
