@@ -1,4 +1,4 @@
-#  Documentation how the website was built
+#  Website build documentation
 > **Version 1.0** | November 2025
 
 This repository contains the source code for the static website, built to be lightweight, fast, and easily maintainable.
