@@ -1,7 +1,7 @@
 # Website Documentation
 > **Version 1.0** | November 2025
 
-**IntegroAI Consulting** is an AI implementation consultancy helping executives, startups, and SMEs navigate AI adoption with clarity and structure. This repository contains the source code for the static website, built to be lightweight, fast, and easily maintainable.
+This repository contains the source code for the static website, built to be lightweight, fast, and easily maintainable.
 
 ---
 
