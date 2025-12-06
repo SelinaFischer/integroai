@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framework - IntegroAI Consulting</title>
+    <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #012f46;
+            --neutral: #4a4a4a;
+            --white: #ffffff;
+            --accent: #b8987f;
+            --tagline-color: #E5C9A8;
+            --dark: #1a1a1a;
+            --light-bg: #fafbfc;
+            --border-subtle: #e8e8e8;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--white); color: var(--dark); line-height: 1.7; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Inter', sans-serif; font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+
+        /* NAVIGATION */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(1, 47, 70, 0.98); backdrop-filter: blur(10px); padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+        .logo { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+        .logo-placeholder { width: 90px; height: 90px; }
+        .logo-placeholder img { width: 90px; height: 90px; object-fit: contain; }
+        .logo-text-container { display: flex; flex-direction: column; gap: 0.15rem; }
+        .logo-text { font-size: 1.4rem; font-weight: 700; color: var(--white); }
+        .logo-tagline { font-size: 0.85rem; color: var(--tagline-color); letter-spacing: 1.5px; }
+        .nav-menu { display: flex; gap: 2rem; align-items: center; }
+        .nav-menu a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; opacity: 0.9; }
+        .nav-menu a:hover { color: var(--tagline-color); opacity: 1; }
+        .nav-menu a.active { color: var(--tagline-color); opacity: 1; }
+        .nav-contact-btn { background: var(--accent); padding: 0.6rem 1.3rem; border-radius: 6px; font-weight: 600; opacity: 1 !important; }
+        .nav-contact-btn:hover { background: var(--tagline-color); color: var(--primary); }
+
+        /* PAGE HEADER */
+        .page-header { 
+            padding-top: 140px; 
+            padding-bottom: 60px;
+            background: var(--primary);
+            color: var(--white); 
+            text-align: center;
+        }
+        .page-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 1rem; }
+        .page-header p { font-size: 1.15rem; color: rgba(237, 254, 254, 0.85); max-width: 850px; margin: 0 auto; line-height: 1.7; }
+
+        /* SECTIONS */
+        .section { padding: 80px 8%; }
+        .section-white { background: var(--white); }
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        /* PYRAMID FRAMEWORK */
+        .pyramid-wrapper { display: flex; gap: 3rem; align-items: flex-start; justify-content: center; max-width: 1200px; margin: 0 auto; }
+        .pyramid-container { display: flex; flex-direction: column; align-items: center; gap: 6px; max-width: 900px; }
+        .pyramid-row { display: flex; gap: 6px; justify-content: center; }
+        .pyramid-block { padding: 1rem 1.2rem; text-align: center; font-size: 0.85rem; font-weight: 600; min-width: 140px; }
+        .pyramid-block .sub { font-size: 0.75rem; font-weight: 400; margin-top: 4px; opacity: 0.85; }
+        .grow-block { background: var(--tagline-color); color: var(--primary); }
+        .amplify-block { background: #6a9ea8; color: var(--primary); }
+        .simplify-block { background: var(--primary); color: var(--white); }
+        
+        .legend-box { background: var(--white); border: 2px solid var(--border-subtle); border-radius: 8px; padding: 1.5rem; min-width: 200px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .legend-box h4 { font-size: 1rem; color: var(--primary); margin-bottom: 1rem; text-align: center; font-weight: 700; }
+        .legend-item { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem; }
+        .legend-item:last-child { margin-bottom: 0; }
+        .legend-color { width: 35px; height: 25px; border-radius: 4px; flex-shrink: 0; }
+        .legend-label { font-size: 0.85rem; color: var(--neutral); line-height: 1.4; }
+
+        /* FOOTER */
+        footer { background: var(--dark); color: var(--white); padding: 60px 8% 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--white); }
+        .footer-brand p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.7; }
+        .footer-col h4 { font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.2rem; }
+        .footer-col a { display: block; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; margin-bottom: 0.8rem; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--tagline-color); }
+        .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+
+        @media (max-width: 968px) {
+            .pyramid-wrapper { flex-direction: column; align-items: center; }
+            .pyramid-block { padding: 0.7rem 0.8rem; font-size: 0.75rem; min-width: 100px; }
+            .pyramid-block .sub { font-size: 0.65rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 600px) {
+            .pyramid-block { min-width: 60px; padding: 0.5rem; font-size: 0.65rem; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-placeholder">
+                <img src="logo.png" alt="IntegroAI Consulting Logo">
+            </div>
+            <div class="logo-text-container">
+                <span class="logo-text">IntegroAI Consulting</span>
+                <span class="logo-tagline">Simplify • Amplify • Grow</span>
+            </div>
+        </a>
+        <div class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="framework.html" class="active">Framework</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html" class="nav-contact-btn">Contact</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Simplify • Amplify • Grow Framework</h1>
+        <p>A structured model that connects strategic foundation, execution and implementation with measurable business value and results.</p>
+    </section>
+
+    <!-- FRAMEWORK PYRAMID -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="pyramid-wrapper">
+                <div class="pyramid-container">
+                    <div class="pyramid-row">
+                        <div class="pyramid-block grow-block">ROI<div class="sub">Measurable business value</div></div>
+                    </div>
+                    <div class="pyramid-row">
+                        <div class="pyramid-block grow-block">Innovation<div class="sub">Competitive advantage</div></div>
+                        <div class="pyramid-block grow-block">KPIs<div class="sub">Success metrics</div></div>
+                    </div>
+                    <div class="pyramid-row">
+                        <div class="pyramid-block amplify-block">Partners<div class="sub">Expert network</div></div>
+                        <div class="pyramid-block amplify-block">Governance<div class="sub">Structure & oversight</div></div>
+                        <div class="pyramid-block amplify-block">Risk Management<div class="sub">Mitigation strategies</div></div>
+                    </div>
+                    <div class="pyramid-row">
+                        <div class="pyramid-block amplify-block">Pilots & Use Cases<div class="sub">Proof of concept</div></div>
+                        <div class="pyramid-block amplify-block">Process Simplification<div class="sub">Automation</div></div>
+                        <div class="pyramid-block amplify-block">Development<div class="sub">Iterative approach</div></div>
+                        <div class="pyramid-block amplify-block">Change Management<div class="sub">Adoption enablement</div></div>
+                    </div>
+                    <div class="pyramid-row">
+                        <div class="pyramid-block simplify-block">Strategic Alignment<div class="sub">Business goals</div></div>
+                        <div class="pyramid-block simplify-block">Data Quality<div class="sub">Infrastructure prep</div></div>
+                        <div class="pyramid-block simplify-block">Executive Leadership<div class="sub">Sponsorship</div></div>
+                        <div class="pyramid-block simplify-block">Tech Scalability<div class="sub">Infrastructure</div></div>
+                        <div class="pyramid-block simplify-block">Talent & Culture<div class="sub">Capability building</div></div>
+                    </div>
+                </div>
+                <div class="legend-box">
+                    <h4>Legend</h4>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: var(--tagline-color);"></div>
+                        <div class="legend-label">Business value<br>& results</div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #6a9ea8;"></div>
+                        <div class="legend-label">Execution &<br>Implementation</div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: var(--primary);"></div>
+                        <div class="legend-label">Strategic<br>Foundation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>IntegroAI Consulting</h3>
+                <p>Transforming AI from promise into measurable business value through strategic foundations, clear execution, and human-centered implementation.</p>
+                                                <div style="margin-top: 1.2rem; display: flex; gap: 1rem; align-items: center; justify-content: center;">
+                    <a href="https://www.linkedin.com/company/integroai-consulting" target="_blank" rel="noopener" style="display: inline-block;" title="LinkedIn">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="4" fill="#0A66C2"/>
+                            <path d="M8.5 9.5H6V18H8.5V9.5Z" fill="white"/>
+                            <path d="M7.25 8.25C8.07843 8.25 8.75 7.57843 8.75 6.75C8.75 5.92157 8.07843 5.25 7.25 5.25C6.42157 5.25 5.75 5.92157 5.75 6.75C5.75 7.57843 6.42157 8.25 7.25 8.25Z" fill="white"/>
+                            <path d="M13.5 13.5C13.5 12.5 14 11.5 15.5 11.5C17 11.5 17.5 12.5 17.5 13.5V18H20V13C20 10.5 18.5 9.5 16.5 9.5C15 9.5 14 10.5 13.5 11V9.5H11V18H13.5V13.5Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/integroai.tech/" target="_blank" rel="noopener" style="display: inline-block;" title="Instagram">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#FED576"/>
+                                    <stop offset="25%" style="stop-color:#F47133"/>
+                                    <stop offset="50%" style="stop-color:#BC3081"/>
+                                    <stop offset="100%" style="stop-color:#4C63D2"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="24" height="24" rx="6" fill="url(#instagram-gradient)"/>
+                            <circle cx="12" cy="12" r="4" stroke="white" stroke-width="2" fill="none"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
+                            <rect x="5" y="5" width="14" height="14" rx="4" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="services.html">Assessment & Auditing</a>
+                <a href="services.html">Strategy & Roadmapping</a>
+                <a href="services.html">Implementation</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="framework.html">Framework</a>
+                <a href="blog.html">Blog</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Get Started</h4>
+                <a href="https://calendly.com/integroai-consulting/30min" target="_blank">Book Consultation</a>
+                <a href="contact.html">Email Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 IntegroAI Consulting. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Schema Markup for AEO/GEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The Simplify • Amplify • Grow Framework",
+      "description": "A structured model that connects strategic foundations, execution and implementation with measurable business value and results.",
+      "author": {
+        "@type": "Organization",
+        "name": "IntegroAI Consulting"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "IntegroAI Consulting",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://integroai.tech/logo.png"
+        }
+      },
+      "datePublished": "2024-12-01",
+      "dateModified": "2024-12-06"
+    }
+    </script>
+</body>
+</html>
