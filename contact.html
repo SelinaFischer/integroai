@@ -294,7 +294,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.querySelector('form[action*="formspree"]');
-            const formContainer = form.parentElement;
             const thankYouMessage = document.getElementById('form-thank-you');
             const submitBtn = form.querySelector('.submit-btn');
             
@@ -320,7 +319,7 @@
                 .then(response => {
                     if (response.ok) {
                         // Success - hide form and show thank you message
-                        formContainer.style.display = 'none';
+                        form.style.display = 'none';
                         thankYouMessage.style.display = 'block';
                         
                         // Reset form
