@@ -142,8 +142,10 @@
     <section class="section section-white" id="contact-form">
         <div class="container">
             <div class="contact-form-wrapper">
-                <h2>Send Us Your Enquiry</h2>
-                <p>Tell us about your needs and we'll get back to you shortly.</p>
+                <div id="form-heading">
+                    <h2>Send Us Your Enquiry</h2>
+                    <p>Tell us about your needs and we'll get back to you shortly.</p>
+                </div>
                 
                 <!-- FORMSPREE FORM -->
                 <form action="https://formspree.io/f/mnnezggg" method="POST">
@@ -294,6 +296,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.querySelector('form[action*="formspree"]');
+            const formHeading = document.getElementById('form-heading');
             const thankYouMessage = document.getElementById('form-thank-you');
             const submitBtn = form.querySelector('.submit-btn');
             
@@ -318,8 +321,9 @@
                 })
                 .then(response => {
                     if (response.ok) {
-                        // Success - hide form and show thank you message
+                        // Success - hide form, heading and show thank you message
                         form.style.display = 'none';
+                        formHeading.style.display = 'none';
                         thankYouMessage.style.display = 'block';
                         
                         // Reset form
