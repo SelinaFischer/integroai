@@ -40,15 +40,43 @@
         
         .nav-contact-btn { background: var(--accent); padding: 0.6rem 1.3rem; border-radius: 6px; font-weight: 600; opacity: 1 !important; }
         .nav-contact-btn:hover { background: var(--tagline-color); color: var(--primary); }
-        .article-container { max-width: 800px; margin: 0 auto; padding: 140px 8% 80px; }
-        .article-header { margin-bottom: 3rem; }
-        .article-meta { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--neutral); }
-        .article-date { font-weight: 500; }
-        .article-category { color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-        .article-read-time { color: var(--neutral); }
+        /* BLOG HEADER */
+        .blog-header { 
+            padding-top: 140px; 
+            padding-bottom: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, #024a6b 100%);
+            color: var(--white); 
+            text-align: center;
+        }
+        .blog-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 1rem; max-width: 900px; margin-left: auto; margin-right: auto; padding: 0 5%; }
+        .blog-meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.95rem; color: rgba(255,255,255,0.8); margin-top: 1.5rem; }
+        .blog-meta span { display: flex; align-items: center; gap: 0.5rem; }
+
+        /* BLOG CONTENT */
+        .blog-content { max-width: 800px; margin: 0 auto; padding: 60px 5%; }
+        .blog-content h2 { color: var(--primary); font-size: 2rem; margin: 3rem 0 1.5rem; }
+        .blog-content h3 { color: var(--primary); font-size: 1.5rem; margin: 2.5rem 0 1rem; }
+        .blog-content p { margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--neutral); }
+        .blog-content strong { color: var(--dark); font-weight: 600; }
+        .blog-content ul { margin: 1.5rem 0 1.5rem 2rem; }
+        .blog-content li { margin-bottom: 1rem; font-size: 1.05rem; line-height: 1.7; color: var(--neutral); }
+
+        /* BACK TO BLOG */
+        .back-to-blog { text-align: center; margin: 2rem 0; }
+        .back-to-blog a { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 1rem; }
+        .back-to-blog a:hover { color: var(--accent); }
+        
+
+        
+        
+        
+        
+        
+        
+        
         .article-header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--primary); margin-bottom: 1rem; line-height: 1.2; }
-        .article-subtitle { font-size: 1.25rem; color: var(--neutral); font-weight: 400; line-height: 1.5; }
-        .article-body { margin-bottom: 4rem; }
+        
+        
         .article-body h2 { font-size: 1.8rem; color: var(--primary); margin: 2.5rem 0 1.2rem; line-height: 1.3; }
         .article-body h3 { font-size: 1.4rem; color: var(--primary); margin: 2rem 0 1rem; line-height: 1.3; }
         .article-body p { font-size: 1.1rem; color: var(--dark); line-height: 1.8; margin-bottom: 1.5rem; }
@@ -65,9 +93,9 @@
         .article-cta h3 { font-size: 1.6rem; margin-bottom: 1.5rem; color: var(--white); }
         .btn-primary { display: inline-block; background: var(--accent); color: var(--white); padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.3s; }
         .btn-primary:hover { background: var(--tagline-color); color: var(--primary); transform: translateY(-2px); }
-        .article-share { text-align: center; padding: 1.5rem 0; margin-bottom: 2rem; }
-        .article-share p { font-size: 0.9rem; color: var(--neutral); margin-bottom: 1rem; }
-        .article-share a { display: inline-block; color: var(--primary); text-decoration: none; font-weight: 600; margin: 0 1rem; transition: color 0.3s; }
+        .article-share { background: var(--light-bg); text-align: center; padding: 2rem; margin: 2rem 0; border-radius: 8px; }
+        .article-share p { font-size: 1rem; color: var(--dark); margin-bottom: 1rem; font-weight: 600; }
+        .article-share a { display: inline-block; color: var(--primary); text-decoration: none; font-weight: 600; margin: 0 1rem; padding: 0.5rem 1rem; transition: color 0.3s; }
         .article-share a:hover { color: var(--accent); }
         .back-to-blog { text-align: center; }
         .back-to-blog a { color: var(--primary); text-decoration: none; font-weight: 600; transition: color 0.3s; }
@@ -82,11 +110,11 @@
         .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: rgba(255,255,255,0.4); font-size: 0.85rem; }
         @media (max-width: 968px) {
             .footer-grid { grid-template-columns: 1fr 1fr; }
-            .article-meta { flex-direction: column; gap: 0.5rem; }
+            
         }
         @media (max-width: 600px) {
             .footer-grid { grid-template-columns: 1fr; text-align: center; }
-            .article-container { padding: 120px 5% 60px; }
+            
             .article-body h2 { font-size: 1.5rem; }
             .article-body h3 { font-size: 1.2rem; }
             .stat-box .big-stat { font-size: 2rem; }
@@ -117,21 +145,18 @@
     </nav>
 
     <!-- ARTICLE -->
-    <article class="article-container">
-        
-        <!-- Article Header -->
-        <header class="article-header">
-            <div class="article-meta">
-                <span class="article-date">23 November, 2025</span>
-                <span class="article-category">Data Strategy</span>
-                <span class="article-read-time">10 min read</span>
-            </div>
-            <h1>Why AI Projects Fail: The Data Gap Nobody Talks About</h1>
-            <p class="article-subtitle">The most advanced AI in the world is worthless without quality data. Here's why 70% of AI projects fail at the data layer—and how to fix it.</p>
-        </header>
+        <!-- BLOG HEADER -->
+    <section class="blog-header">
+        <h1>Why AI Projects Fail: The Data Gap Nobody Talks About</h1>
+        <div class="blog-meta">
+            <span>📅 23 November, 2025</span>
+            <span>📁 Data Strategy</span>
+            <span>⏱️ 10 min read</span>
+        </div>
+    </section>
 
-        <!-- Article Body -->
-        <div class="article-body">
+    <!-- BLOG CONTENT -->
+    <article class="blog-content">
             
             <p>Everyone wants to talk about AI models, algorithms, and cutting-edge technology. But here's the uncomfortable truth that most consultants won't tell you: <strong>your AI project will fail or succeed based on your data, not your technology.</strong></p>
 
