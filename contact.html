@@ -201,7 +201,7 @@
     </section>
 
     <!-- PROFESSIONAL CTA SECTION -->
-    <section class="cta-section">
+    <section class="cta-section" id="cta-section">
         <div class="cta-content">
             <h2>Ready to Make AI Work for Your Business?</h2>
             <p>Book your free 30-minute AI Readiness Consultation. We'll assess your current state, identify immediate opportunities, and outline a practical path forward.</p>
@@ -297,6 +297,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.querySelector('form[action*="formspree"]');
             const formHeading = document.getElementById('form-heading');
+            const ctaSection = document.getElementById('cta-section');
             const thankYouMessage = document.getElementById('form-thank-you');
             const submitBtn = form.querySelector('.submit-btn');
             
@@ -321,9 +322,10 @@
                 })
                 .then(response => {
                     if (response.ok) {
-                        // Success - hide form, heading and show thank you message
+                        // Success - hide form, heading, CTA and show thank you message
                         form.style.display = 'none';
                         formHeading.style.display = 'none';
+                        ctaSection.style.display = 'none';
                         thankYouMessage.style.display = 'block';
                         
                         // Reset form
