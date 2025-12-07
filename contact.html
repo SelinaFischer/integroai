@@ -38,7 +38,8 @@
         .nav-menu a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; opacity: 0.9; }
         .nav-menu a:hover { color: var(--tagline-color); opacity: 1; }
         .nav-menu a.active { color: var(--tagline-color); opacity: 1; }
-        
+        .nav-menu a.nav-secondary { color: var(--tagline-color); opacity: 0.85; }
+        .nav-menu a.nav-secondary:hover { opacity: 1; }
         .nav-contact-btn { background: var(--accent); padding: 0.6rem 1.3rem; border-radius: 6px; font-weight: 600; opacity: 1 !important; }
         .nav-contact-btn:hover { background: var(--tagline-color); color: var(--primary); }
 
@@ -46,7 +47,7 @@
         .page-header { 
             padding-top: 140px; 
             padding-bottom: 60px;
-            background: #002940;
+            background: var(--primary);
             color: var(--white); 
             text-align: center;
         }
@@ -122,11 +123,11 @@
         </a>
         <div class="nav-menu">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="framework.html">Framework</a>
-            <a href="faq.html">FAQ</a>
-            <a href="blog.html">Blog</a>
+            <a href="about.html" class="nav-secondary">About</a>
+            <a href="services.html" class="nav-secondary">Services</a>
+            <a href="framework.html" class="nav-secondary">Framework</a>
+            <a href="faq.html" class="nav-secondary">FAQ</a>
+            <a href="blog.html" class="nav-secondary">Blog</a>
             <a href="contact.html" class="nav-contact-btn active">Contact</a>
         </div>
     </nav>
@@ -146,25 +147,37 @@
                 
                 <!-- FORMSPREE FORM -->
                 <form action="https://formspree.io/f/mnnezggg" method="POST">
+                    <p class="form-note" style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: -1rem; margin-bottom: 1.5rem;">
+                        <span style="color: #dc3545;">*</span> Required fields
+                    </p>
+                    
                     <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <label for="name">Full Name <span style="color: #dc3545;">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="Your name" minlength="2" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        <label for="email">Email Address <span style="color: #dc3545;">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="company">Company Name</label>
-                        <input type="text" id="company" name="company" placeholder="Company">
+                        <label for="company">Company Name <span style="color: #dc3545;">*</span></label>
+                        <input type="text" id="company" name="company" placeholder="Company" minlength="2" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="message">What Are You Looking For?</label>
                         <textarea id="message" name="message" placeholder="Describe your needs or ask a question..." required></textarea>
                     </div>
+                    
+                    
+                    
+                    <!-- Formspree Configuration -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - IntegroAI">
+                    <input type="hidden" name="_captcha" value="true">
+                    <!-- Honeypot for spam protection -->
+                    <input type="text" name="_gotcha" style="display:none">
                     
                     <button type="submit" class="submit-btn">Submit Inquiry</button>
                 </form>
@@ -225,9 +238,9 @@
             <div class="footer-col">
                 <h4>Company</h4>
                 <a href="about.html">About Us</a>
-                <a href="framework.html">Framework</a>
-                <a href="faq.html">FAQ</a>
-                <a href="blog.html">Blog</a>
+                <a href="framework.html" class="nav-secondary">Framework</a>
+                <a href="faq.html" class="nav-secondary">FAQ</a>
+                <a href="blog.html" class="nav-secondary">Blog</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="footer-col">
